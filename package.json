@@ -1,0 +1,16 @@
+{
+  "name": "pciis-nuxt-gh-pages",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "npx serve .output/public"
+  },
+  "dependencies": {
+    "@nuxtjs/seo": "^3.1.0",
+    "nuxt": "^3.16.0",
+    "vue": "latest"
+  },
+  "devDependencies": {}
+}
