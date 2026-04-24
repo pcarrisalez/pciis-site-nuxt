@@ -3,7 +3,7 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || "/",
+    baseURL: process.env.NODE_ENV === "production" ? "/pciis-site-nuxt/" : "/",
     head: {
       htmlAttrs: { lang: "en" },
       title: "PCIIS | Small Business IT Support & Technical Solutions",

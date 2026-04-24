@@ -660,7 +660,7 @@ const _inlineRuntimeConfig = {
         "headers": {
           "Content-Type": "text/xml; charset=UTF-8",
           "Cache-Control": "public, max-age=600, must-revalidate",
-          "X-Sitemap-Prerendered": "2026-04-24T17:07:00.867Z"
+          "X-Sitemap-Prerendered": "2026-04-24T17:52:44.930Z"
         }
       },
       "/_nuxt": {
@@ -749,6 +749,8 @@ const _inlineRuntimeConfig = {
         }
       ],
       "sitemap": [
+        "/sitemap.xml",
+        "/sitemap.xml",
         "/sitemap.xml"
       ],
       "header": true,
@@ -802,6 +804,8 @@ const _inlineRuntimeConfig = {
         "include": [],
         "exclude": [
           "/_**",
+          "/_nuxt/**",
+          "/_nuxt/**",
           "/_nuxt/**"
         ],
         "includeAppSources": true
@@ -857,6 +861,8 @@ const _inlineRuntimeConfig = {
       }
     ],
     "sitemap": [
+      "/sitemap.xml",
+      "/sitemap.xml",
       "/sitemap.xml"
     ],
     "header": true,
@@ -904,9 +910,9 @@ const _inlineRuntimeConfig = {
     "strictNuxtContentPaths": "",
     "isNuxtContentDocumentDriven": false,
     "componentDirs": [
-      "OgImage",
+      "OgImageTemplate",
       "og-image",
-      "OgImageTemplate"
+      "OgImage"
     ]
   }
 };
