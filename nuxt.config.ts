@@ -1,9 +1,12 @@
+import { defineNuxtConfig } from "nuxt/config";
 // Static Nuxt configuration for GitHub Pages.
 // Set NUXT_APP_BASE_URL=/<repo-name>/ automatically in GitHub Actions for project pages.
+
+const isProduction = process.env.NODE_ENV === "production";
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: process.env.NODE_ENV === "production" ? "/pciis-site-nuxt/" : "/",
+    baseURL: isProduction ? "/pciis-site-nuxt/" : "/",
     head: {
       htmlAttrs: { lang: "en" },
       title: "PCIIS | Small Business IT Support & Technical Solutions",
@@ -18,11 +21,4 @@ export default defineNuxtConfig({
     },
   },
   css: ["~/app/assets/css/main.css"],
-  nitro: {
-    preset: "github_pages",
-    prerender: {
-      crawlLinks: true,
-    },
-  },
-  modules: ["@nuxtjs/seo"],
 });
