@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import {
-  experienceGroups,
-  projectCards,
-  services,
-  skills,
-} from "./app/data/site";
+import { experienceGroups, projectCards, services, skills } from "./data/site";
 
 const contactEmail = "phillip@pciis.com";
 // const phone = '419-341-3740'

@@ -4,7 +4,7 @@ import { defineNuxtConfig } from "nuxt/config";
 
 const isProduction = process.env.NODE_ENV === "production";
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   app: {
     // baseURL: isProduction ? "/pciis-site-nuxt/" : "/",
     baseURL: "/pciis-site-nuxt/", //hardcode for now
@@ -21,5 +21,5 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/app/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
 });
