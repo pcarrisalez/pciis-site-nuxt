@@ -3,22 +3,26 @@
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: process.env.NUXT_APP_BASE_URL || '/',
+    baseURL: process.env.NUXT_APP_BASE_URL || "/",
     head: {
-      htmlAttrs: { lang: 'en' },
-      title: 'PCIIS | Small Business IT Support & Technical Solutions',
+      htmlAttrs: { lang: "en" },
+      title: "PCIIS | Small Business IT Support & Technical Solutions",
       meta: [
-        { name: 'description', content: 'PCIIS provides practical IT support, software implementation, integrations, reporting, networking support, and technical marketing help for small businesses and organizations in northwest Ohio.' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' }
-      ]
-    }
+        {
+          name: "description",
+          content:
+            "PCIIS provides practical IT support, software implementation, integrations, reporting, networking support, and technical marketing help for small businesses and organizations in northwest Ohio area.",
+        },
+        { name: "viewport", content: "width=device-width, initial-scale=1" },
+      ],
+    },
   },
-  css: ['~/assets/css/main.css'],
+  css: ["~/app/assets/css/main.css"],
   nitro: {
-    preset: 'github_pages',
+    preset: "github_pages",
     prerender: {
-      crawlLinks: true
-    }
+      crawlLinks: true,
+    },
   },
-  modules: ['@nuxtjs/seo']
-})
+  modules: ["@nuxtjs/seo"],
+});

@@ -1,8 +1,13 @@
 <script setup lang="ts">
-import { experienceGroups, projectCards, services, skills } from './data/site'
+import {
+  experienceGroups,
+  projectCards,
+  services,
+  skills,
+} from "./app/data/site";
 
-const contactEmail = 'phillip@pciis.com'
-const phone = '419-341-3740'
+const contactEmail = "phillip@pciis.com";
+// const phone = '419-341-3740'
 </script>
 
 <template>
@@ -26,13 +31,22 @@ const phone = '419-341-3740'
     <main id="top">
       <section class="hero section-shell">
         <div class="hero-copy">
-          <p class="eyebrow">Small business IT • Software support • Technical problem solving</p>
-          <h1>Practical technology help for local businesses that need things to work.</h1>
+          <p class="eyebrow">
+            Small business IT • Software support • Technical problem solving
+          </p>
+          <h1>
+            Practical technology help for local businesses that need things to
+            work.
+          </h1>
           <p class="lede">
-            PCIIS helps small businesses, professional offices, restaurants, retail shops, and nonprofits solve technology problems without overcomplicating the answer.
+            PCIIS helps small businesses, professional offices, restaurants,
+            retail shops, and nonprofits solve technology problems without
+            overcomplicating the answer.
           </p>
           <div class="hero-actions">
-            <a class="button primary" :href="`mailto:${contactEmail}`">Start a conversation</a>
+            <a class="button primary" :href="`mailto:${contactEmail}`"
+              >Start a conversation</a
+            >
             <a class="button secondary" href="#services">View services</a>
           </div>
         </div>
@@ -42,7 +56,9 @@ const phone = '419-341-3740'
             <li>Networking, device, and workstation troubleshooting</li>
             <li>Virus removal and practical security cleanup support</li>
             <li>Third-party software and SaaS implementation support</li>
-            <li>Reporting, databases, integrations, and technical documentation</li>
+            <li>
+              Reporting, databases, integrations, and technical documentation
+            </li>
           </ul>
         </aside>
       </section>
@@ -53,12 +69,18 @@ const phone = '419-341-3740'
           <h2>Useful support across everyday business technology.</h2>
         </div>
         <p>
-          The focus is simple: understand the business need, stabilize the current process, and provide a maintainable solution that owners and staff can actually use.
+          The focus is simple: understand the business need, stabilize the
+          current process, and provide a maintainable solution that owners and
+          staff can actually use.
         </p>
       </section>
 
       <section class="section-shell service-grid" aria-label="Services">
-        <article v-for="service in services" :key="service.title" class="card service-card">
+        <article
+          v-for="service in services"
+          :key="service.title"
+          class="card service-card"
+        >
           <h3>{{ service.title }}</h3>
           <p>{{ service.body }}</p>
           <ul>
@@ -72,11 +94,15 @@ const phone = '419-341-3740'
           <p class="eyebrow">Experience base</p>
           <h2>Grounded in business-facing support and implementation work.</h2>
           <p>
-            Phillip Carrisalez brings experience translating business needs into practical software and support solutions across customer-facing and operational systems.
+            PCIIS brings experience translating business needs into practical
+            software and support solutions across customer-facing and
+            operational systems.
           </p>
         </div>
         <div class="pill-list" aria-label="Client and business types supported">
-          <span v-for="group in experienceGroups" :key="group">{{ group }}</span>
+          <span v-for="group in experienceGroups" :key="group">{{
+            group
+          }}</span>
         </div>
       </section>
 
@@ -84,7 +110,11 @@ const phone = '419-341-3740'
         <p class="eyebrow">Representative work</p>
         <h2>Modernized project story</h2>
         <div class="project-grid">
-          <article v-for="project in projectCards" :key="project.title" class="card project-card">
+          <article
+            v-for="project in projectCards"
+            :key="project.title"
+            class="card project-card"
+          >
             <h3>{{ project.title }}</h3>
             <p>{{ project.description }}</p>
             <div class="tags">
@@ -97,7 +127,10 @@ const phone = '419-341-3740'
       <section class="section-shell skills-section">
         <div>
           <p class="eyebrow">Tools and skills</p>
-          <h2>Current capabilities with a history of getting legacy systems useful again.</h2>
+          <h2>
+            Current capabilities with a history of getting legacy systems useful
+            again.
+          </h2>
         </div>
         <div class="skill-cloud">
           <span v-for="skill in skills" :key="skill">{{ skill }}</span>
@@ -109,13 +142,19 @@ const phone = '419-341-3740'
           <p class="eyebrow">Contact</p>
           <h2>Need practical technical help?</h2>
           <p>
-            Reach out with the system, device, workflow, or business problem you are trying to solve. A short summary is enough to start.
+            Reach out with the system, device, workflow, or business problem you
+            are trying to solve. A short summary is enough to start.
           </p>
         </div>
         <div class="contact-card">
-          <a class="contact-line" :href="`mailto:${contactEmail}`">{{ contactEmail }}</a>
-          <a class="contact-line" :href="`tel:${phone.replaceAll('-', '')}`">{{ phone }}</a>
-          <p class="fine-print">Oak Harbor, Ohio • Serving northwest Ohio and remote support needs where appropriate.</p>
+          <div class="hero-actions">
+            <a class="button primary" :href="`mailto:${contactEmail}`"
+              >Start a conversation</a
+            >
+          </div>
+          <p class="fine-print">
+            Serving northwest Ohio and remote support needs where appropriate.
+          </p>
         </div>
       </section>
     </main>
