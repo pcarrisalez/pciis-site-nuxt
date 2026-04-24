@@ -6,7 +6,8 @@ const isProduction = process.env.NODE_ENV === "production";
 export default defineNuxtConfig({
   ssr: true,
   app: {
-    baseURL: isProduction ? "/pciis-site-nuxt/" : "/",
+    // baseURL: isProduction ? "/pciis-site-nuxt/" : "/",
+    baseURL: "/pciis-site-nuxt/", //hardcode for now
     head: {
       htmlAttrs: { lang: "en" },
       title: "PCIIS | Small Business IT Support & Technical Solutions",
